@@ -23,7 +23,7 @@ const ProjectsPage = ({ data }) => {
 
 export const query = graphql`
   {
-    allStrapiProjects {
+    allStrapiProjects(sort: { fields: created_at, order: DESC }) {
       nodes {
         strapiId
         description
