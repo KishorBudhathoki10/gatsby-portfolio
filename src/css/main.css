@@ -82,7 +82,7 @@ h1,
 h2,
 h3,
 h4 {
-  letter-spacing: var(--spacing);
+  /* letter-spacing: var(--spacing); */
   text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
@@ -105,6 +105,12 @@ p {
   color: var(--clr-grey-3);
 }
 @media screen and (min-width: 800px) {
+  h1,
+  h2,
+  h3,
+  h4 {
+    letter-spacing: var(--spacing);
+  }
   h1 {
     font-size: 4rem;
   }
@@ -566,13 +572,11 @@ Jobs
   background: transparent;
   border-color: transparent;
   text-transform: capitalize;
-  font-size: 1.25rem;
-  letter-spacing: var(--spacing);
+  font-size: 1rem;
   margin: 0 0.5rem;
   transition: var(--transition);
   cursor: pointer;
   padding: 0.25rem 0;
-  line-height: 1;
 }
 .job-btn:hover {
   color: var(--clr-primary-5);
@@ -624,8 +628,12 @@ Jobs
     flex-direction: column;
     justify-content: flex-start;
   }
+
   .job-btn {
     margin-bottom: 1rem;
+    font-size: 1.25rem;
+    letter-spacing: var(--spacing);
+    line-height: 1;
   }
   .active-btn {
     box-shadow: -2px 0 var(--clr-primary-5);
@@ -686,7 +694,7 @@ Projects
   font-size: 1.5rem;
 }
 .project-desc {
-  word-spacing: 15px;
+  word-spacing: 2px;
   color: var(--clr-grey-3);
 }
 .project-stack {
@@ -746,6 +754,9 @@ Projects
     z-index: 1;
     grid-column: 5 /12;
     grid-row: 1 / 1;
+  }
+  .project-desc {
+    word-spacing: 6px;
   }
   .project:nth-of-type(even) .project-img {
     grid-column: 5 / -1;
@@ -989,7 +1000,7 @@ Contact Page
   margin-bottom: 1.25rem;
   background: var(--clr-grey-10);
   border-radius: var(--radius);
-  letter-spacing: var(--spacing);
+  letter-spacing: 2px;
 }
 .form-control::placeholder {
   font-family: var(--ff-primary);
@@ -1049,4 +1060,10 @@ Blog Template
 .blog-template img {
   width: 100%;
   margin: 3rem 0;
+}
+
+@media screen and (min-width: 992px) {
+  .form-control {
+    letter-spacing: var(--spacing);
+  }
 }
